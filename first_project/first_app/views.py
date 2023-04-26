@@ -1,17 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Create your views here.
+def index(request):
+    return render(request,'first_app/index.html')
 
 def home(request):
-    return render(request,'first_app/home.html')
+    return HttpResponse("Welcome to home page!")
 
-def search(request):
-    return render(request,'first_app/search.html')
-
-def about(request):
-    return render(request,'first_app/about.html')
-
-def index(request):
-    playlist_list={"playlists":{'1': {'Love Lies', 'raheleh', 'Love Lies', 3.21}, '2': {'Rise', 'Jack and Jonas', 'Blue', 3.14}}}
-    return render(request,'first_app/index.html', context=playlist_list)
+def educative(request):
+    return HttpResponse("Welcome to Educative page!")

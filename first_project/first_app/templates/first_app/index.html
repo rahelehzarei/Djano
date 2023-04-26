@@ -1,29 +1,13 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
 <head>
     <meta charset="UTF-8">
-    <title>Songs Playlist</title>
+    <title>Django Guitar Page</title>
 </head>
-<body style="background-color: aquamarine;">
-    <h1  style = "text-align: center">Coding playlist</style></h1>
-    <table style="width:100%; text-align:center">
-        <tr>
-            <th>No.</th>
-            <th>Track</th>
-            <th>Artist</th>
-            <th>Album</th>
-            <th>Length</th>
-        </tr>
-        {% for playList in playlists.items %}
-        <tr>
-            <td>{{forloop.counter}}</td>
-            <td>{{Track}}</td>
-            <td>{{Artist}}</td>
-            <td>{{Album}}</td>
-            <td>{{Length}}</td>
-        </tr>
-        {% endfor %}
-        </table>
+<body>
+
+    <h1>Hi, this is a pic of Django himself!</h1>
+    <img src= "{% static 'first_app/images/django-guitar.jpg' %}" alt="Uh Oh,didn't show!">
+    
 </body>
 </html>
